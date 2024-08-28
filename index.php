@@ -10,6 +10,8 @@
     <?php
      require_once "load.php";
      print $Obj->user_age("Patrick", 1964);
+     echo "<br>";
+     print $Obj-> computer_user("Maina");
     ?>
     <p>Learning this</p>
 </body>
