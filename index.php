@@ -6,7 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>GITTY</h1>
+<h1>GITTY</h1>
+    <?php
+     require_once "load.php";
+     print $Obj->user_age("Patrick", 1964);
+    ?>
     <p>Learning this</p>
 </body>
 </html>
