@@ -7,7 +7,7 @@ class fnc{
     private $password;
 
     public function computer_user($fname){
-          return $fname;
+          return $fname . " is currently using this computer. ";
     }
 
     public function user_age ($name, $yob){
@@ -19,3 +19,5 @@ class fnc{
 
 $Obj = new fnc();
 print $Obj->user_age("Patrick", 1964);
+echo "<br>";
+print $Obj-> computer_user("Maina");
