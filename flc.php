@@ -20,4 +20,4 @@ class fnc{
 /*$Obj = new fnc();
 print $Obj->user_age("Patrick", 1964);
 echo "<br>";
-print $Obj-> computer_user("Maina");*?
+print $Obj-> computer_user("Maina");*/
