@@ -7,6 +7,11 @@
 </head>
 <body>
 <h1>GITTY</h1>
+<?php
+require "load.php";
+$ObjLayouts->heading();
+$ObjMenus->main_menu();
+?>
     <?php
      require_once "load.php";
      print $Obj->user_age("Patrick", 1964);
