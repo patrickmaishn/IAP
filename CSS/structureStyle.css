@@ -1,5 +1,4 @@
 body{
-    background-color: black;
     margin: 0;
 }
 
@@ -13,7 +12,7 @@ body{
 }
 
 .topnav a{
-    color:beige;
+    color:azure;
     float: left;
     display: block;
     text-decoration: none;

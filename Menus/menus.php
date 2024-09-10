@@ -5,10 +5,10 @@ class menus{
         <div class="topnav">
             <a href="./">HOME</a>
             <a href="">ABOUT</a>
-            <a href="">Our Portfolio</a>
-            <a href="">Our Projects</a>
-            <a href="">Contact Us</a>
-            <?php $this->main_right_menu();?>
+            <a href="">OUR PORTFOLIO</a>
+            <a href="">OUR PROJECTS</a>
+            <a href="">CONTACT US</a>
+            <?php $this->main_right_menu(); ?>
 
         </div>
         <?php

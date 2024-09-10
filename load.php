@@ -3,7 +3,9 @@
 //Class auto load.
 
 function classAutoLoad($classname){
-$directories = ["contents", "layouts", "meanus"];
+
+$directories = ["contents", "layouts", "menus"];
+
 foreach($directories AS $dir){
 $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
 if(file_exists($filename) AND is_readable($filename)){
@@ -15,13 +17,8 @@ if(file_exists($filename) AND is_readable($filename)){
 spl_autoload_register('classAutoLoad');
 
 
-require_once "layouts/layouts.php";
 $ObjLayouts = new layouts();
-
-require_once "Menus/menus.php";
 $ObjMenus = new menus();
-
-require_once "contents/headings.php";
 $ObjHeadings = new headings();
 
 /*print dirname(__FILE__);
