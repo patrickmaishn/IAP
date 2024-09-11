@@ -20,6 +20,7 @@ spl_autoload_register('classAutoLoad');
 $ObjLayouts = new layouts();
 $ObjMenus = new menus();
 $ObjHeadings = new headings();
+$ObjCont = new contents();
 
 /*print dirname(__FILE__);
 echo "<br>";

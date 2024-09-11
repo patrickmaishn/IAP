@@ -14,6 +14,7 @@ class menus{
         <?php
     }
 
+
     public function main_right_menu(){
        ?>
        <div class="topnav-right">
