@@ -7,7 +7,7 @@ class fnc{
     private $password;
 
     public function computer_user($fname){
-          return $fname . " is currently using this computer. ";
+          return $fname . " is currently using this computer to solve some github problems. ";
     }
 
     public function user_age ($name, $yob){
