@@ -22,6 +22,11 @@ $ObjMenus = new menus();
 $ObjHeadings = new headings();
 $ObjCont = new contents();
 
+require "includes/constants.php";
+require "includes/dbconnection.php";
+
+$conn = new dbconnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
+
 /*print dirname(__FILE__);
 echo "<br>";
 print $_SERVER["PHP_SELF"];
