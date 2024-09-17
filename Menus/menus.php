@@ -18,7 +18,7 @@ class menus{
     public function main_right_menu(){
        ?>
        <div class="topnav-right">
-        <a href="">Sign Up</a>
+        <a href="/class/IAP/Sign Up/signup.php">Sign Up</a>
         <a href="">Sign In</a>
        </div>
        <?php
