@@ -80,73 +80,6 @@ if($_POST) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #6a116a, #2575fc);
-            color: white;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        h2{
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 2rem;
-            color: white;
-        }
-
-        form{
-            background: white;
-            color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        form input[type="text"],
-        form input[type="email"],
-        form input[type="password"],
-        form select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        form input[type="submit"] {
-            background: #2575fc;
-            color: #fff;
-            border: none;
-            padding: 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        form input[type="submit"]:hover {
-            background: #6a11cb;
-        }
-
-        form select {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-        }
-        .message {
-            text-align: center;
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-        
-    </style>
 </head>
 <body>
     <h2>Sign Up</h2>
@@ -167,7 +100,7 @@ if($_POST) {
     </form>
     <?php
     if($user->createUser()){
-        echo '<div class= "message">User was created successfully!</div>';
+        echo '<div>User was created successfully!</div>';
     }else{
         echo "<div>Unable to create user!</div>";
     }
