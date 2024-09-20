@@ -1,4 +1,6 @@
 <?php
+require "includes/constants.php";
+require "includes/dbConnection.php";
 
 // Class Auto Load 
 
@@ -23,23 +25,12 @@ spl_autoload_register('classAutoLoad');
     $ObjCont = new contents();
     $ObjForm = new user_forms();
 
-require "includes/constants.php";
-require "includes/dbConnection.php";
+
 
 $conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
 
+//Create processes
+$ObjAuth = new auth();
+$ObjAuth->signup($conn);
 
-// print 
-// print "<br>";
-// print "<br>";
-// print $_SERVER["PHP_SELF"];
-// print "<br>";
-// print "<br>";
-// print basename($_SERVER["PHP_SELF"]);
-// print "<br>";
-// print "<br>";
-// if(file_exists("index.php") AND is_readable("index.php")){
-//     print "yes";
-// }else{
-//     print "no";
-// }
+
