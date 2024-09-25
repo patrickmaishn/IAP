@@ -1,4 +1,5 @@
 <?php
+
 require "includes/constants.php";
 require "includes/dbConnection.php";
 
@@ -6,7 +7,7 @@ require "includes/dbConnection.php";
 
 function classAutoLoad($classname){
 
-    $directories = ["contents", "layouts", "menus", "forms"];
+    $directories = ["contents", "layouts", "menus", "forms", "processes"];
 
     foreach($directories AS $dir){
         $filename = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir . DIRECTORY_SEPARATOR . $classname . ".php";
@@ -24,13 +25,10 @@ spl_autoload_register('classAutoLoad');
     $ObjHeadings = new headings();
     $ObjCont = new contents();
     $ObjForm = new user_forms();
+    $conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
 
 
+// Create process instances
 
-$conn = new dbConnection(DBTYPE, HOSTNAME, DBPORT, HOSTUSER, HOSTPASS, DBNAME);
-
-//Create processes
-$ObjAuth = new auth();
-$ObjAuth->signup($conn);
-
-
+    $ObjAuth = new auth();
+    $ObjAuth->signup($conn);
