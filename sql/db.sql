@@ -88,7 +88,7 @@ ALTER TABLE `roles`
 
 COMMIT;
 
-SELECT * FROM users WHERE username = 'john' OR '1'='1'
+
 
 
 
