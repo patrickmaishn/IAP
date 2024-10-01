@@ -30,12 +30,6 @@ CREATE TABLE IF NOT EXISTS `gender` (
   UNIQUE KEY `gender` (`gender`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `roles`
---
-
 DROP TABLE IF EXISTS `roles`;
 CREATE TABLE IF NOT EXISTS `roles` (
   `roleId` tinyint(1) NOT NULL AUTO_INCREMENT,
@@ -45,12 +39,6 @@ CREATE TABLE IF NOT EXISTS `roles` (
   PRIMARY KEY (`roleId`),
   UNIQUE KEY `role` (`role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -70,23 +58,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `roleId` (`roleId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `gender`
---
 ALTER TABLE `gender`
   ADD CONSTRAINT `gender_ibfk_1` FOREIGN KEY (`genderId`) REFERENCES `users` (`genderId`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
---
--- Constraints for table `roles`
---
 ALTER TABLE `roles`
   ADD CONSTRAINT `roles_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `users` (`roleId`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
-COMMIT;
 
 
 
