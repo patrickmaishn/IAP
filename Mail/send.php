@@ -2,7 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'IAP/Mail/PHP_Mailer/src/Exception.php';
+require 'IAP\Mail\PHP_Mailer\src\Exception.php';
 require 'IAP/Mail/PHP_Mailer/src/PHPMailer.php';
 require 'IAP/Mail/PHP_Mailer/src/SMTP.php';
 
