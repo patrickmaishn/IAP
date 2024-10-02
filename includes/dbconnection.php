@@ -9,6 +9,8 @@
         private $db_pass;
         private $db_name;
 
+        private $posted_values;
+
         public function __construct($db_type, $db_host, $db_port, $db_user, $db_pass, $db_name){
             $this->db_type = $db_type;
             $this->db_host = $db_host;
