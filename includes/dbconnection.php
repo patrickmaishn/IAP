@@ -1,3 +1,4 @@
+
 <?php
     class dbConnection{
         private $connection;
@@ -8,8 +9,6 @@
         private $db_user;
         private $db_pass;
         private $db_name;
-
-        private $posted_values;
 
         public function __construct($db_type, $db_host, $db_port, $db_user, $db_pass, $db_name){
             $this->db_type = $db_type;
@@ -41,7 +40,9 @@
                     // Create connection
                     $this->connection = new mysqli($db_host, $db_user, $db_pass, $db_name);
                     // Check connection
-                    if ($this->connection->connect_error) { return "Connection failed: " . $this->connection->connect_error; } else{ echo "Connected successfully"; }
+                    if ($this->connection->connect_error) { return "Connection failed: " . $this->connection->connect_error; } else{ 
+                        // echo "Connected successfully"; 
+                    }
                     break;
             }
         }
