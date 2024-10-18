@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="startTimer()">
 
     <!--Possibility 1-->
     <h1>Hello World</h1>
@@ -35,9 +35,11 @@
 
 <button onclick = "document.getElementById('myImg'), src='offbulb.jpeg' ">Turn off</button>
 
+<!--
 <script>
     window.alert("Connection failed!");
 </script>
+-->
 
 <br>
 
@@ -68,7 +70,21 @@
     else
     document.write('I am NOT an adult');
 </script>
+<br>
+<a href="" onclick = "window.print();">print</a>
+<br>
+<script>
+    let username = prompt('please enter your name');
+    const message = `Hello ${username} your username ${username} has been logged successfully`;
+    document.write(message);
+</script>
 
+<br>
+
+
+<p id="tmr"></p>
+
+<script src="JS/startTimer.js"></script>
 <script src="JS/script.js"></script>
 </body>
 </html>
