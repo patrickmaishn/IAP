@@ -1,3 +1,3 @@
-function myScript(r, t){
-    document.getElementById('ICS').innerHTML = 'r + t';
+function MyScript(r, t){
+    document.getElementById('ics_D').innerHTML = r + t;
 }
